@@ -1,0 +1,94 @@
+@import 'scss/functions'; 
+@import 'scss/variables';
+
+
+//piccole correzioni colori primari
+
+
+$new-primary: #818181;
+$new-secondary: #141414;
+$new-info: #666666;
+
+
+$new-theme-colors: (
+  'primary': $new-primary,
+  'secondary': $new-secondary,
+  'info': $new-info,
+  'salvatore': rgb(48, 48, 247),
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+
+
+
+
+
+//classi fix
+
+.big {
+  transition: transform 0.3s ease;
+  .big:hover {
+    transform: scale(1.2);
+  }
+
+
+}
+
+.margins{margin-top: 5em;}
+
+.font-min{font-size: 0.8em}
+
+
+.grad{background: rgb(0,0,0);
+
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, transparent);}
+
+
+  .border-fix{ border-radius: 0 !important;}
+
+
+
+  .main-creat{    max-width: 50%; 
+    min-width: 50%;
+    margin: auto;}
+
+
+
+
+//checkbox modificata
+
+input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(247, 241, 241);
+  background-color: transparent;
+
+  &:checked {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid rgb(247, 241, 241);
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color: none;
+    box-shadow: none;
+    border: 1px solid rgb(247, 241, 241);
+    outline: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'scss/bootstrap.scss';
